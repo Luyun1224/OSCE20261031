@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>急徵 OSCE 國考考官 1 名｜10/31（六）嘉義長庚醫院</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#FF6A13;
+  --navy:#0B1A3A;
+  --cream:#FFF3DC;
+  --paper:#FFFBF2;
+  --ink:#0B1A3A;
+  --ink-soft:#4A5674;
+  --line:#0B1A3A;
+  --on-orange:#0B1A3A;
+  --ok:#1C7A4A;
+  --err:#C4271B;
+  --shadow:6px 6px 0 var(--line);
+  --shadow-sm:4px 4px 0 var(--line);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --cream:#0B1A3A;
+    --paper:#13254D;
+    --ink:#FFF3DC;
+    --ink-soft:#C3CBE0;
+    --line:#FFF3DC;
+    --ok:#6FD7A2;
+    --err:#FF8A7E;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.7;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+.num{font-family:"Archivo Black","Noto Sans TC",sans-serif;font-weight:400;letter-spacing:-.01em}
+
+/* ---------- Top bar ---------- */
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0}
+.unit{font-weight:700;font-size:14px}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  border:2.5px solid var(--line);border-radius:999px;
+  background:var(--paper);padding:5px 14px;
+  font-weight:900;font-size:14px;white-space:nowrap;
+}
+.pill .dot{width:10px;height:10px;border-radius:50%;background:var(--ink-soft)}
+.pill.open .dot{background:var(--ok)}
+.pill.full .dot{background:var(--err)}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;
+  background:var(--orange);
+  color:var(--on-orange);
+  border:3px solid var(--line);
+  border-radius:32px;
+  box-shadow:var(--shadow);
+  padding:28px 28px 30px;
+  overflow:hidden;
+}
+.hero .big{
+  font-weight:900;
+  font-size:clamp(112px,31vw,220px);
+  line-height:.92;
+  letter-spacing:-.04em;
+  margin-left:-.04em;
+}
+.hero .sub{
+  font-weight:900;
+  font-size:clamp(26px,6.4vw,42px);
+  line-height:1.25;
+  margin-top:14px;
+}
+.hero .sub .num{font-size:1.15em}
+.hero .lead{font-weight:700;font-size:17px;margin-top:10px}
+.sticker{
+  position:absolute;top:22px;right:22px;
+  width:118px;height:118px;border-radius:50%;
+  background:var(--navy);color:#FFF3DC;
+  border:3px solid #0B1A3A;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;line-height:1.15;
+  transform:rotate(12deg);
+}
+.sticker b{font-family:"Archivo Black",sans-serif;font-size:46px;line-height:1;color:var(--orange)}
+.sticker span{font-weight:900;font-size:14px;margin-top:4px}
+
+/* ---------- Ticker ---------- */
+.ticker{
+  margin:22px 0;
+  background:var(--navy);color:#FFF3DC;
+  border:3px solid var(--line);border-radius:999px;
+  overflow:hidden;white-space:nowrap;
+  padding:10px 0;font-weight:900;font-size:16px;
+}
+@media (prefers-color-scheme: dark){ .ticker{background:var(--orange);color:#0B1A3A} }
+.ticker .track{display:inline-flex;gap:0}
+.ticker .seg{display:inline-flex;align-items:center}
+.ticker .seg span{padding:0 18px}
+.ticker .seg i{font-style:normal;color:var(--orange)}
+@media (prefers-color-scheme: dark){ .ticker .seg i{color:#0B1A3A} }
+@media (prefers-reduced-motion:no-preference){
+  .ticker .track{animation:scroll 26s linear infinite}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+}
+
+/* ---------- Grid modules ---------- */
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.mod{
+  background:var(--paper);
+  border:3px solid var(--line);
+  border-radius:26px;
+  box-shadow:var(--shadow-sm);
+  padding:20px 22px;
+}
+.mod .k{font-weight:900;font-size:14px;color:var(--ink-soft);margin-bottom:6px}
+.mod .v{font-weight:900;font-size:22px;line-height:1.3}
+.span2{grid-column:span 2}
+.span3{grid-column:span 3}
+.span4{grid-column:span 4}
+.span6{grid-column:span 6}
+
+.m-date .v.num{font-size:clamp(46px,11vw,64px);line-height:1}
+.m-date .wk{font-weight:900;font-size:18px;margin-top:6px}
+.m-time .v.num{font-size:clamp(28px,6.4vw,38px);line-height:1.1}
+.tag{
+  display:inline-block;margin-top:10px;
+  border:2.5px solid var(--line);border-radius:999px;
+  padding:2px 12px;font-weight:700;font-size:13px;
+  background:var(--cream);
+}
+.m-time .note{font-size:14px;color:var(--ink-soft);margin-top:8px;font-weight:500}
+
+.m-leave{background:var(--navy);color:#FFF3DC}
+.m-leave .k{color:#C3CBE0}
+@media (prefers-color-scheme: dark){ .m-leave{background:#FFF3DC;color:#0B1A3A} .m-leave .k{color:#4A5674} }
+
+/* money */
+.m-money{background:var(--orange);color:var(--on-orange)}
+.m-money .k{color:var(--on-orange)}
+.money-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.money-total{font-size:clamp(44px,11vw,72px);line-height:1}
+.money-total small{font-family:"Noto Sans TC",sans-serif;font-weight:900;font-size:.36em;margin-right:6px;vertical-align:.5em}
+.money-rows{margin-top:16px;border-top:2.5px solid var(--on-orange)}
+.money-rows div{
+  display:grid;grid-template-columns:1fr auto;gap:12px;
+  padding:10px 0;border-bottom:2.5px solid var(--on-orange);
+  font-weight:700;
+}
+.money-rows div:last-child{border-bottom:none;padding-bottom:0}
+.money-rows .num{font-size:20px;text-align:right}
+
+/* letter */
+.letter p{font-weight:500;margin-bottom:10px;text-align:justify}
+.letter p:last-child{margin-bottom:0}
+.letter h2{font-weight:900;font-size:26px;line-height:1.3;margin-bottom:12px}
+.letter .sign{text-align:right;font-weight:700;color:var(--ink-soft)}
+
+/* ---------- Form ---------- */
+.form-mod{padding:26px 24px 28px}
+.form-mod h2{font-weight:900;font-size:clamp(28px,7vw,40px);line-height:1.2;margin-bottom:6px}
+.form-mod .intro{font-weight:500;color:var(--ink-soft);margin-bottom:20px}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:900;font-size:17px;margin-bottom:8px}
+.field .hint{font-weight:500;font-size:14px;color:var(--ink-soft);margin:-4px 0 8px}
+.field input{
+  width:100%;font:inherit;font-weight:700;font-size:18px;color:var(--ink);
+  background:var(--cream);
+  border:3px solid var(--line);border-radius:999px;
+  padding:13px 22px;
+}
+.field input::placeholder{color:var(--ink-soft);font-weight:500;opacity:.7}
+.field input:focus{outline:none;background:var(--paper);box-shadow:var(--shadow-sm)}
+.msg-err{display:none;color:var(--err);font-weight:700;font-size:14px;margin:6px 0 0 22px}
+.invalid input{border-color:var(--err)}
+.invalid .msg-err{display:block}
+
+.btn{
+  display:block;width:100%;
+  font:inherit;font-weight:900;font-size:21px;
+  background:var(--orange);color:#0B1A3A;
+  border:3px solid var(--line);border-radius:999px;
+  box-shadow:var(--shadow-sm);
+  padding:15px 20px;cursor:pointer;margin-top:8px;
+  transition:transform .08s,box-shadow .08s;
+}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--line)}
+.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--line)}
+.btn:focus-visible{outline:3px dashed var(--line);outline-offset:4px}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:var(--shadow-sm)}
+.form-err{display:none;color:var(--err);font-weight:700;text-align:center;margin-top:14px}
+
+.panel{display:none;text-align:center;padding:10px 0}
+.panel .face{font-family:"Archivo Black",sans-serif;font-size:64px;line-height:1;margin-bottom:12px}
+.panel h3{font-weight:900;font-size:clamp(30px,7.5vw,42px);line-height:1.2;margin-bottom:12px}
+.panel p{font-weight:500;color:var(--ink-soft);margin-bottom:6px}
+.panel.success .face{color:var(--orange)}
+@media (prefers-reduced-motion:no-preference){
+  .panel.show{animation:pop .4s cubic-bezier(.2,1.4,.4,1)}
+  @keyframes pop{from{transform:scale(.92);opacity:0}to{transform:none;opacity:1}}
+}
+
+footer{text-align:center;font-size:13px;font-weight:500;color:var(--ink-soft);padding:30px 0 40px;line-height:1.9}
+
+/* ---------- Responsive ---------- */
+@media (max-width:640px){
+  .grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .span2,.span3{grid-column:span 1}
+  .span4,.span6,.m-place,.m-leave{grid-column:span 2}
+  .hero{padding:22px 20px 24px;border-radius:26px}
+  .sticker{width:92px;height:92px;top:16px;right:16px}
+  .sticker b{font-size:34px}
+  .sticker span{font-size:12px}
+  .mod{padding:18px 18px}
+  .unit{font-size:13px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="unit">奇美醫院 臨床技能中心</div>
+    <div class="pill" id="pill"><span class="dot"></span><span id="pillText">確認名額中</span></div>
+  </div>
+
+  <section class="hero">
+    <div class="sticker"><b>1</b><span>名額<br>先填先得</span></div>
+    <div class="big">急徵</div>
+    <div class="sub">OSCE 國考考官 <span class="num">1</span> 名</div>
+    <div class="lead">颱風把考試吹到下週六了，老師可以來救援嗎？</div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="track">
+      <div class="seg"><span>10/31 星期六</span><i>✦</i><span>嘉義長庚醫院</span><i>✦</i><span>公假我們幫你辦</span><i>✦</i><span>費用合計 NT$15,200</span><i>✦</i><span>只限一名</span><i>✦</i></div>
+      <div class="seg"><span>10/31 星期六</span><i>✦</i><span>嘉義長庚醫院</span><i>✦</i><span>公假我們幫你辦</span><i>✦</i><span>費用合計 NT$15,200</span><i>✦</i><span>只限一名</span><i>✦</i></div>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="mod span2 m-date">
+      <div class="k">日期</div>
+      <div class="v num">10/31</div>
+      <div class="wk">星期六</div>
+    </div>
+
+    <div class="mod span4 m-time">
+      <div class="k">時間</div>
+      <div class="v num">10:00–18:00</div>
+      <span class="tag">兩梯次</span>
+      <div class="note">實際報到時間以考場正式通知為準。</div>
+    </div>
+
+    <div class="mod span3 m-place">
+      <div class="k">地點</div>
+      <div class="v">嘉義長庚醫院</div>
+    </div>
+
+    <div class="mod span3 m-leave">
+      <div class="k">公假</div>
+      <div class="v">我們幫您申請，您專心評分就好</div>
+    </div>
+
+    <div class="mod span6 m-money">
+      <div class="money-head">
+        <div class="k">考官福利</div>
+        <div class="money-total num"><small>合計 NT$</small>15,200</div>
+      </div>
+      <div class="money-rows">
+        <div><span>評分費（兩梯次）</span><span class="num">7,200</span></div>
+        <div><span>院內獎勵費</span><span class="num">8,000</span></div>
+        <div><span>科部外績效</span><span>列計</span></div>
+      </div>
+    </div>
+
+    <div class="mod span6 letter">
+      <h2>老師，先跟您說聲謝謝</h2>
+      <p>原定 10/24（六）的 OSCE 國考，因薔琵颱風來襲，台灣醫學教育學會已公告延期至 10/31（六）。原本排定的考官下週沒辦法配合，所以我們現在急需一位老師幫忙。</p>
+      <p>我們知道週末時間很珍貴，臨時拜託真的很不好意思。如果您那天剛好有空，誠心邀請您一起陪考生完成這場重要的考試。行政和公假的部分，交給我們處理。</p>
+      <p class="sign">臨床技能中心 Lulu 敬上</p>
+    </div>
+
+    <div class="mod span6 form-mod" id="formCard">
+      <form id="form" novalidate>
+        <h2>我可以！</h2>
+        <p class="intro">留下姓名和電話就完成了，考場會用這支電話跟您聯繫。</p>
+
+        <div class="field" data-f="name">
+          <label for="name">姓名</label>
+          <input type="text" id="name" autocomplete="name" placeholder="王大明">
+          <div class="msg-err">請填寫姓名</div>
+        </div>
+
+        <div class="field" data-f="phone">
+          <label for="phone">電話</label>
+          <p class="hint">考試當天考場聯繫使用，建議留手機</p>
+          <input type="tel" id="phone" autocomplete="tel" inputmode="tel" placeholder="0912-345-678">
+          <div class="msg-err">請填寫可聯絡的電話號碼</div>
+        </div>
+
+        <button type="submit" class="btn" id="submitBtn" disabled>我要支援這場考試</button>
+        <div class="form-err" id="formErr"></div>
+      </form>
+
+      <div class="panel success" id="panelSuccess">
+        <div class="face">✦</div>
+        <h3>收到！謝謝老師</h3>
+        <p>您就是這次的救援考官，我們會盡快跟您聯繫，公假也會幫您辦好。</p>
+        <p>10/31 嘉義長庚見！</p>
+      </div>
+
+      <div class="panel full" id="panelFull">
+        <div class="face">FULL</div>
+        <h3>名額已經額滿了</h3>
+        <p>已經有老師搶先一步支援囉。</p>
+        <p>謝謝您願意點進來，這份心意我們一樣很感動。</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    奇美醫院教學部｜臨床技能中心<br>
+    延期公告：台灣醫學教育學會 OSCE 辦公室，2026-10-23
+  </footer>
+</div>
+
+<script>
+/* ===== 請將 GAS 部署後的網址貼在這裡 ===== */
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyRBvEGghSHsCDnDhAGJUelsKjdsaItlF1hD7OKKj2WwNBR9HjkqAJeRN0-tMiTnRgNqw/exec';
+
+const $ = id => document.getElementById(id);
+const form = $('form'), btn = $('submitBtn');
+
+function setPill(state, text){
+  $('pill').className = 'pill ' + state;
+  $('pillText').textContent = text;
+}
+function showPanel(which){
+  form.style.display = 'none';
+  const p = $(which === 'success' ? 'panelSuccess' : 'panelFull');
+  p.style.display = 'block';
+  p.classList.add('show');
+  setPill('full', which === 'success' ? '已完成，謝謝您' : '名額已滿');
+}
+
+async function checkStatus(){
+  try{
+    const r = await fetch(GAS_URL + '?action=status&t=' + Date.now());
+    const d = await r.json();
+    if (d.full){ showPanel('full'); return; }
+    setPill('open', `剩 ${d.remaining} 名`);
+  }catch(e){
+    setPill('', '送出時確認名額');
+  }
+  btn.disabled = false;
+}
+
+function validate(){
+  let ok = true;
+  const mark = (f, bad) => {
+    document.querySelector(`[data-f="${f}"]`).classList.toggle('invalid', bad);
+    if (bad) ok = false;
+  };
+  mark('name', !$('name').value.trim());
+  mark('phone', $('phone').value.replace(/\D/g,'').length < 8);
+  if (!ok) document.querySelector('.invalid input').focus();
+  return ok;
+}
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  $('formErr').style.display = 'none';
+  if (!validate()) return;
+
+  btn.disabled = true;
+  btn.textContent = '送出中…';
+
+  try{
+    const r = await fetch(GAS_URL, {
+      method:'POST',
+      headers:{'Content-Type':'text/plain;charset=utf-8'},
+      body: JSON.stringify({ name:$('name').value.trim(), phone:$('phone').value.trim() })
+    });
+    const d = await r.json();
+    if (d.ok){ showPanel('success'); return; }
+    if (d.code === 'FULL'){ showPanel('full'); return; }
+    throw new Error(d.message || '送出失敗');
+  }catch(err){
+    $('formErr').textContent = (err.message || '送出失敗') + '，請再試一次，或直接聯繫臨床技能中心。';
+    $('formErr').style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = '我要支援這場考試';
+  }
+});
+
+document.querySelectorAll('.field input').forEach(el =>
+  el.addEventListener('input', () => el.closest('.field').classList.remove('invalid'))
+);
+
+checkStatus();
+</script>
+</body>
+</html>
